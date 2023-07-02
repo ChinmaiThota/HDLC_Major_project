@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+        <script>
+function validateform(){
+            let name=document.myform.name.value;
+            let name1=document.myform.name1.value;
+            let password=document.myform.pwd.value;
+            let mail=document.myform.mail.value;
+            let phno=document.myform.num.value;
+            const nameRegex = /^[a-zA-Z\s]+$/
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\d{10}$/;
+            if(name==''||name==null){
+              alert("name cannnot be empty");
+              return false;
+            }
+            if(name1==''||name1==null){
+              alert("name cannnot be empty");
+              return false;
+            }
+            if(!nameRegex.test(name)){
+              alert("Enter a valid name");
+              return false;
+            }
+            if(password.length==0){
+              alert("password cannnot be empty");
+              return false;
+            }
+          if(password.length<6){
+            alert("Enter a valid password");
+            return false;
+          }
+          if(mail==""||mail==null){
+              alert("emaild id cannnot be empty");
+              return false;
+            }
+            if(Year==""||Year==null){
+              alert("must enter year");
+            }
+          
+          if(!emailRegex.test(mail)){
+            alert("Enter a valid emailid");
+            return false;
+          }
+         if(phno==''||phno==null){
+              alert("phone number cannnot be empty");
+              return false;
+            }      
+            if(!phoneRegex.test(phno)){
+            alert("Enter a valid phone number");
+            return false;
+          }
+        }
+          </script>
+          <link rel="stylesheet" href="style.css">
+          
+</head>
+<body><center>
+  <!--<h1 align="center" style="font-family:Courier New">Employee Registration Form</h1> -->
+  <h1 style="color:brown;font-family: Geneva;">Shri Vishnu Engineering College for Women</h1>
+<div class="myform">
+    <form name="myform" method="post" action="connection.php" >
+      <h2 align="center" style="background-color: rgb(24, 53, 156); color:beige;column-width: 300px;max-width: 300px;align-self: center;">Student Registration Form</h1>
+  <label for="name" style="font-size: 30px;">Fisrtname:</label>
+  <input type="text" id="name" name="name"  placeholder="chinmai"><br><br>
+
+  <label for="name1" style="font-size: 30px;">Lastname:</label>
+  <input type="text" id="name1" name="name1" placeholder="Thota" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="name1" style="font-size: 30px;">Fathername:</label>
+  <input type="text" id="name2" name="name2" placeholder="xyz" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+<label for="Reg No" style="font-size: 30px;">Date of Birth:</label>
+  <input type="date" id="Reg No" name="dob" placeholder="dd-mm-yyyy" style="border-radius: 10px;border-width: 5px; width: 150px;"><br><br>
+
+  <label for="Year" style="font-size: 30px;">Year of study:</label>
+  <input type="text" id="Year" name="Year" placeholder="1" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+<table>
+  <tr>
+    <td style="font-size: 30px;">Branch:</td>
+<td><div><input type="radio" id="cate" name="rad1">
+  <label for="cate" style="font-size: 30px;">AI&DS</label><br></div></td>
+</tr>
+<tr>
+  <td></td>
+<td><div><input type="radio" id="cate1" name="rad1">
+  <label for="cate1" style="font-size: 30px;">AI&ML</label><br></div></td>
+  </tr>
+
+  <tr>
+    <td></td>
+  <td><div><input type="radio" id="cate2" name="rad1">
+    <label for="cate1" style="font-size: 30px;">CSE</label><br></div></td>
+    </tr>
+
+    <tr>
+      <td></td>
+    <td><div><input type="radio" id="cate3" name="rad1">
+      <label for="cate1" style="font-size: 30px;">IT</label><br></div></td>
+      </tr>
+    </table>
+
+    <label for="cgpa" style="font-size: 30px;">CGPA:</label>
+  <input type="text" id="cgpa" name="cgpa" placeholder="9.8" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="email" style="font-size: 30px;">email:</label>
+  <input type="email" id="email" name="mail"  placeholder="abc@gmail.com" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="pswwd" style="font-size: 30px;">Password:</label>
+  <input type="password" id="pswwd" name="pwd"  style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="phno" style="font-size: 30px;">phone no:</label>
+  <input type="text" id="phno" name="num" placeholder="XXXXXXXXXX" style="border-radius: 10px;border-width: 5px;"><br><br><br>
+
+  <table>
+    <tr>
+<td>
+  <a href="https://www.svecw.edu.in/">more about us</a></td>
+  <td><img src="https://thebabyedition.com/wp-content/uploads/2023/03/women-25.png" height="200px" width="200px"></td>
+
+</tr>
+</table>
+  <center><input type="submit" id="submit" style="border-radius: 10px;border-width: 5px; height:35px ;width:100px;" name="sub" value="submit" onclick="validateform()"></center>
+</form>
+</div>
+  </center>
+</body>
+</html>

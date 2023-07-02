@@ -1,0 +1,25 @@
+.myform{
+    width:600px;
+    height:1000px;
+    margin: auto;
+    border:5px solid black;
+    padding-top: 4px;
+
+}
+a:link{
+    color:violet;
+}
+  
+a:visited{
+    color:blue;
+}
+body{
+    background-image:url('bg2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#name{
+    border-radius: 10px;
+    border-width: 5px;
+}
